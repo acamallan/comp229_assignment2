@@ -33,7 +33,6 @@ const list = async (req, res) => {
 
 const productById = async (req, res, next, id) => {
     try {
-        console.log(id)
         let product = await Product.findById(id) 
         if (!product)
             return res.status(400).json({ 
